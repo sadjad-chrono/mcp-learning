@@ -1,0 +1,51 @@
+{
+  "name": "mcp-server-deployment",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server providing arithmetic tools",
+  "type": "module",
+  "main": "dist/mcpserver/index.js",
+  "types": "dist/mcpserver/index.d.ts",
+  "bin": {
+    "mcp-server-deployment": "dist/mcpserver/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/mcpserver/index.js",
+    "dev": "tsx src/mcpserver/index.ts",
+    "dev:watch": "tsx watch src/mcpserver/index.ts",
+    "debug": "tsx --inspect src/mcpserver/index.ts",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "ai",
+    "tools"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/mcp-server-deployment.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.3",
+    "pngjs": "^7.0.0",
+    "puppeteer": "^24.24.0",
+    "robotjs": "^0.6.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/pngjs": "^6.0.5",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
