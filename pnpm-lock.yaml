@@ -11,6 +11,9 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: ^1.17.3
         version: 1.17.3
+      '@sadjadteh-chrono/mcp-learning':
+        specifier: ^1.0.0
+        version: 1.0.0(typescript@5.9.3)
       pngjs:
         specifier: ^7.0.0
         version: 7.0.0
@@ -210,6 +213,10 @@ packages:
   '@puppeteer/browsers@2.10.13':
     resolution: {integrity: sha512-a9Ruw3j3qlnB5a/zHRTkruppynxqaeE4H9WNj5eYGRWqw0ZauZ23f4W2ARf3hghF5doozyD+CRtt7XSYuYRI/Q==}
     engines: {node: '>=18'}
+    hasBin: true
+
+  '@sadjadteh-chrono/mcp-learning@1.0.0':
+    resolution: {integrity: sha512-4Pin8VGYLNHjCcrHRK8xrp31wyo8hHaZ7V8C92Z7Vc5/W7rWr6qLVInYxmR1FVmpQ2w6z+qN95YnryKQEjbNgQ==}
     hasBin: true
 
   '@tootallnate/quickjs-emscripten@0.23.0':
@@ -1252,6 +1259,22 @@ snapshots:
       - bare-buffer
       - react-native-b4a
       - supports-color
+
+  '@sadjadteh-chrono/mcp-learning@1.0.0(typescript@5.9.3)':
+    dependencies:
+      '@modelcontextprotocol/sdk': 1.17.3
+      pngjs: 7.0.0
+      puppeteer: 24.31.0(typescript@5.9.3)
+      robotjs: 0.6.0
+      zod: 3.25.76
+    transitivePeerDependencies:
+      - bare-abort-controller
+      - bare-buffer
+      - bufferutil
+      - react-native-b4a
+      - supports-color
+      - typescript
+      - utf-8-validate
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
