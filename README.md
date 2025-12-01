@@ -53,7 +53,7 @@ To use this MCP server with Claude Desktop, you need to add it to your Claude co
       "command": "npx",
       "args": [
         "-y",
-        "@sadjad-chrono/mcp-learning"
+        "@sadjadteh-chrono/mcp-learning"
       ]
     }
   }
@@ -214,9 +214,9 @@ npm publish --access public
 Then users can install with:
 
 ```bash
-npm install -g @sadjad-chrono/mcp-learning
+npm install -g @sadjadteh-chrono/mcp-learning
 # or use with npx
-npx @sadjad-chrono/mcp-learning
+npx @sadjadteh-chrono/mcp-learning
 ```
 
 ## License
