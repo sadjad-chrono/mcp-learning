@@ -1,4 +1,4 @@
-# MCP Server Deployment
+# MCP Learning
 
 A Model Context Protocol (MCP) server that provides arithmetic tools for AI assistants like Claude.
 
@@ -17,8 +17,8 @@ A Model Context Protocol (MCP) server that provides arithmetic tools for AI assi
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/mcp-server-deployment.git
-cd mcp-server-deployment
+git clone https://github.com/sadjad-chrono/mcp-learning.git
+cd mcp-learning
 
 # Install dependencies
 pnpm install
@@ -44,33 +44,33 @@ To use this MCP server with Claude Desktop, you need to add it to your Claude co
 
 2. **Add the server configuration:**
 
-#### Option 1: Using the built package (recommended)
-
-After building the project, add this to your `claude_desktop_config.json`:
+#### Option 1: Using npx (recommended after publishing to npm)
 
 ```json
 {
   "mcpServers": {
-    "mcp-server-deployment": {
-      "command": "node",
+    "mcp-learning": {
+      "command": "npx",
       "args": [
-        "/absolute/path/to/mcp-server-deployment/dist/mcpserver/index.js"
+        "-y",
+        "@sadjad-chrono/mcp-learning"
       ]
     }
   }
 }
 ```
 
-#### Option 2: Using npx (if published to npm)
+#### Option 2: Using the built package from cloned repo
+
+After building the project, add this to your `claude_desktop_config.json`:
 
 ```json
 {
   "mcpServers": {
-    "mcp-server-deployment": {
-      "command": "npx",
+    "mcp-learning": {
+      "command": "node",
       "args": [
-        "-y",
-        "mcp-server-deployment"
+        "/absolute/path/to/mcp-learning/dist/mcpserver/index.js"
       ]
     }
   }
@@ -82,12 +82,12 @@ After building the project, add this to your `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "mcp-server-deployment": {
+    "mcp-learning": {
       "command": "npx",
       "args": [
         "-y",
         "tsx",
-        "/absolute/path/to/mcp-server-deployment/src/mcpserver/index.ts"
+        "/absolute/path/to/mcp-learning/src/mcpserver/index.ts"
       ]
     }
   }
@@ -109,7 +109,7 @@ Once configured and Claude Desktop is restarted:
 ### Project Structure
 
 ```
-mcp-server-deployment/
+mcp-learning/
 ├── src/
 │   └── mcpserver/
 │       └── index.ts          # Main MCP server implementation
@@ -184,31 +184,39 @@ git init
 git add .
 
 # Create initial commit
-git commit -m "Initial commit: MCP server deployment"
+git commit -m "Initial commit: MCP learning server"
 
 # Add remote repository
-git remote add origin https://github.com/YOUR_USERNAME/mcp-server-deployment.git
+git remote add origin https://github.com/sadjad-chrono/mcp-learning.git
 
 # Push to GitHub
 git push -u origin main
 ```
 
-## Publishing to npm (Optional)
+## Publishing to npm
 
-If you want to publish to npm for easier installation:
+### Prerequisites
+1. Create an npm account at https://www.npmjs.com/signup
+2. Login to npm: `npm login`
 
-1. Update the `repository` URL in `package.json`
-2. Ensure you have an npm account and are logged in (`npm login`)
-3. Run:
+### Publish Steps
 
 ```bash
-npm publish
+# Build the package
+pnpm build
+
+# Publish to npm (scoped packages are public by default for free accounts)
+npm publish --access public
 ```
+
+**Note:** The `--access public` flag is required for scoped packages on free npm accounts.
 
 Then users can install with:
 
 ```bash
-npm install -g mcp-server-deployment
+npm install -g @sadjad-chrono/mcp-learning
+# or use with npx
+npx @sadjad-chrono/mcp-learning
 ```
 
 ## License

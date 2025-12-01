@@ -1,5 +1,5 @@
 {
-  "name": "mcp-learning",
+  "name": "@sadjadteh-chrono/mcp-learning",
   "version": "1.0.0",
   "description": "A Model Context Protocol (MCP) server for learning",
   "type": "module",
