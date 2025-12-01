@@ -18,7 +18,7 @@ server.registerTool(
       a: z.number().describe("The first number to add."),
       b: z.number().describe("The second number to add."),
     },
-    // outputSchema: { result: z.number() },
+    outputSchema: { result: z.number() },
   },
   async ({ a, b }: { a: number; b: number }) => {
     const output = { result: a + b };

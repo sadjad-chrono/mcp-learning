@@ -1,6 +1,6 @@
 {
   "name": "@sadjadteh-chrono/mcp-learning",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A Model Context Protocol (MCP) server for learning",
   "type": "module",
   "main": "dist/mcpserver/index.js",
@@ -38,7 +38,6 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.3",
-    "@sadjadteh-chrono/mcp-learning": "^1.0.0",
     "pngjs": "^7.0.0",
     "puppeteer": "^24.24.0",
     "robotjs": "^0.6.0",
