@@ -1,12 +1,12 @@
 {
   "name": "mcp-server-deployment",
   "version": "1.0.0",
-  "description": "A Model Context Protocol (MCP) server providing arithmetic tools",
+  "description": "A Model Context Protocol (MCP) server for learning",
   "type": "module",
   "main": "dist/mcpserver/index.js",
   "types": "dist/mcpserver/index.d.ts",
   "bin": {
-    "mcp-server-deployment": "dist/mcpserver/index.js"
+    "mcp-learning": "dist/mcpserver/index.js"
   },
   "files": [
     "dist",
@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "pnpm run build",
     "start": "node dist/mcpserver/index.js",
     "dev": "tsx src/mcpserver/index.ts",
     "dev:watch": "tsx watch src/mcpserver/index.ts",
@@ -27,13 +27,14 @@
     "model-context-protocol",
     "claude",
     "ai",
-    "tools"
+    "tools",
+    "learning"
   ],
-  "author": "",
+  "author": "Sadjad Tehranchi",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/mcp-server-deployment.git"
+    "url": "https://github.com/sadjad-chrono/mcp-learning.git"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.3",
